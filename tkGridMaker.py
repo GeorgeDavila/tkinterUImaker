@@ -25,7 +25,7 @@ def gridPlacer(gridArray, emptyEntity = '00', default_padx=0, default_pady=0):
     for i in UIentityList:
         coordinateTuple = [(index, row.index(i)) for index, row in enumerate(gridArray) if i in row][0] #(row, column) coordinate tuple
         
-        constructionString = constructionString + f"{i}.grid(row={coordinateTuple[0]}, column={coordinateTuple[0]}, padx={default_padx}, pady={default_pady})" + "\n"
+        constructionString = constructionString + f"{i}.grid(row={coordinateTuple[0]}, column={coordinateTuple[1]}, padx={default_padx}, pady={default_pady})" + "\n"
     
     print(constructionString) #this is actual code output
 
